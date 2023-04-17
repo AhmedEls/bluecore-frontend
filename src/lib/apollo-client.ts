@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client"
 
 const client = new ApolloClient({
-  uri: "http://localhost:10011/graphql",
+  uri: "https://bluecore.iocodelab.com/graphql",
   cache: new InMemoryCache(),
 })
 

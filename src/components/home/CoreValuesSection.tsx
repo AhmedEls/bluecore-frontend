@@ -4,11 +4,14 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 import { classNames } from "@helpers"
+import { CoreValue } from "@types"
 
-export interface CoreValuesSectionProps {}
+export interface CoreValuesSectionProps {
+  coreValues: CoreValue[]
+}
 
 export function CoreValuesSection(props: CoreValuesSectionProps) {
-  let coreValues = []
+  const { coreValues } = props
 
   React.useEffect(() => {
     let ctx = gsap.context(() => {
@@ -106,7 +109,7 @@ export function CoreValuesSection(props: CoreValuesSectionProps) {
               ></span>
               <h2 className="text-2xl font-semibold">{i.cvTitle}</h2>
               <h3 className="text-lg font-medium">{i.cvSubtitle}</h3>
-              <p>{i.cvDesc.replace(/<\/?[^>]+(>|$)/g, "")}</p>
+              <p>{i.cvDesc}</p>
             </div>
           ))}
         </div>

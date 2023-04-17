@@ -78,14 +78,14 @@ export function CoreValuesSection(props: CoreValuesSectionProps) {
   return (
     <div className="relative">
       <div
-        className="container relative h-full mx-auto"
+        className="container relative mx-auto h-full"
         id="corevalues-container"
       >
-        <div className="absolute bottom-0 flex flex-col items-center justify-center w-10 text-gray-200 -translate-x-1/2 left-1/2 top-2">
+        <div className="absolute bottom-0 left-1/2 top-2 flex w-10 -translate-x-1/2 flex-col items-center justify-center text-gray-200">
           <div className="timeline-upper mb-auto mt-1 w-0.5 bg-current"></div>
         </div>
         <div
-          className="grid justify-center w-full h-full grid-cols-4 grid-rows-4 gap-x-10 gap-y-6"
+          className="grid h-full w-full grid-cols-4 grid-rows-4 justify-center gap-x-10 gap-y-6"
           id="corevalues-grid"
         >
           {coreValues.map((i, idx) => (
@@ -111,18 +111,18 @@ export function CoreValuesSection(props: CoreValuesSectionProps) {
           ))}
         </div>
         <h2
-          className="absolute top-0 left-0 translate-y-20"
+          className="absolute left-0 top-0 translate-y-20"
           id="corevalues-heading"
         >
           <span
             style={{ writingMode: "vertical-lr" }}
-            className="absolute top-0 left-0 overflow-hidden font-black text-black bottom-full whitespace-nowrap text-8xl"
+            className="absolute bottom-full left-0 top-0 overflow-hidden whitespace-nowrap text-8xl font-black text-black"
           >
             Our Core Values
           </span>
           <span
             style={{ writingMode: "vertical-lr" }}
-            className="font-black text-gray-200 text-8xl"
+            className="text-8xl font-black text-gray-200"
           >
             Our Core Values
           </span>

@@ -1,7 +1,5 @@
 import React from "react"
 
-import { gql } from "@apollo/client"
-
 import { AboutSection } from "@components/home/AboutSection"
 import { ContactSection } from "@components/home/ContactSection"
 import { CoreValuesSection } from "@components/home/CoreValuesSection"
@@ -13,7 +11,6 @@ import { SelectedWorks } from "@components/home/SelectedWorks"
 
 import type { NextPageWithLayout } from "./_app"
 import AppLayout from "../layouts/AppLayout"
-import client from "../lib/apollo-client"
 
 const Home: NextPageWithLayout = () => {
   return (

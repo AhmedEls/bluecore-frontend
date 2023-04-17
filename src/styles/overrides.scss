@@ -1,0 +1,118 @@
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke: 1px currentColor;
+}
+
+body #curs {
+  opacity: 0 !important;
+  transition: all 0.3s ease-out !important;
+}
+
+body:hover #curs {
+  opacity: 1 !important;
+}
+
+#clock__indicator {
+  -webkit-animation-name: clock-point;
+  animation-name: clock-point;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: forward;
+  animation-direction: forward;
+}
+
+@-webkit-keyframes clock-point {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes clock-point {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Page Loader */
+.js .loading {
+  overflow: hidden;
+}
+
+#loading-screen {
+  pointer-events: none;
+}
+
+#loading-screen > div {
+  transform-origin: top;
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5, 0.5, 1);
+  }
+}
+
+.marquee {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.marquee-content h2 {
+  display: inline-block;
+  font-size: 2vw;
+  white-space: nowrap;
+  @apply font-poppins font-black text-gray-200 transition-colors;
+}
+
+.marquee-content h2:hover {
+  @apply text-gray-900;
+}
+
+.marquee-content h2:not(:last-child) {
+  margin-right: 2.5vw;
+}
